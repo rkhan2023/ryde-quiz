@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryde Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .question, .end {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="question" id="q1">
+    <p>It's Monday morning. How are you walking into the office?</p>
+    <button onclick="nextQuestion('e1')">Like I’ve had 5 cups of coffee already.</button><br>
+    <button onclick="nextQuestion('f1')">Deep in thought about that big project.</button><br>
+    <button onclick="nextQuestion('r1')">It’s Monday already?</button><br>
+</div>
+
+<div class="question" id="e1">
+    <!-- ... and so on for each question ... -->
+</div>
+
+<div class="question" id="f1">
+    <!-- ... and so on for each question ... -->
+</div>
+
+<div class="question" id="r1">
+    <!-- ... and so on for each question ... -->
+</div>
+
+<div class="end" id="energy">You're all about that zest and zeal! Keep up the high spirits with Ryde's Energy shot.</div>
+<div class="end" id="focus">Laser-sharp and always on point! Keep the momentum going with Ryde's Focus shot.</div>
+<div class="end" id="relax">You're the office Zen master. Unwind even more with Ryde's Relax shot.</div>
+
+<script>
+    function nextQuestion(id) {
+        document.querySelectorAll('.question').forEach(q => q.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+    }
+    document.getElementById('q1').style.display = 'block';  // start with the first question
+</script>
+
+</body>
+</html>
